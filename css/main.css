@@ -1565,6 +1565,33 @@ header>.container>.links>li:last-child:hover .mega-menu {
   background-color: #fff;
   opacity: .8;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats .container .content .box::before,
+.stats .container .content .box::after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  background-color: var(--main-color);
+  position: absolute;
+  transition: 1s;
+}
+
+.stats .container .content .box::before {
+  top: 100%;
+  left: 0;
+}
+
+.stats .container .content .box::after {
+  top: -100%;
+  right: 0;
+}
+
+.stats .container .content .box:hover:before,
+.stats .container .content .box:hover:after {
+  top: 0;
 }
 
 .stats .container .content .box i {
